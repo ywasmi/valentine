@@ -50,22 +50,14 @@
       color: white;
     }
 
-    /* 🔥 ANIMAÇÃO DE TREMER */
-    @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-2px); }
-      50% { transform: translateX(2px); }
-      75% { transform: translateX(-2px); }
-      100% { transform: translateX(0); }
-    }
-
+    /* 🖤 NÃO dramático */
     .no {
-      background: #333;
-      color: white;
+      background: #000;
+      color: #ff4d6d;
       position: absolute;
       font-weight: bold;
+      border: 2px solid #ff4d6d;
       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-      animation: shake 0.4s infinite;
     }
 
   </style>
@@ -111,7 +103,7 @@
     yesBtn.style.transform = "scale(" + yesSize + ")";
 
     if (attempts === 3) {
-      noBtn.innerText = "PARA OWW 😭";
+      noBtn.innerText = "PARA OWW 🖤";
     }
 
     if (attempts === 5) {
@@ -126,6 +118,10 @@
       noBtn.style.display = "none";
     }
   });
+</script>
+
+</body>
+</html>
 </script>
 
 </body>

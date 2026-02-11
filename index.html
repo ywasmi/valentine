@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Valentine 💘</title>
+
   <style>
     body {
       margin: 0;
@@ -49,11 +50,24 @@
       color: white;
     }
 
+    /* 🔥 ANIMAÇÃO DE TREMER */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-2px); }
+      50% { transform: translateX(2px); }
+      75% { transform: translateX(-2px); }
+      100% { transform: translateX(0); }
+    }
+
     .no {
-      background: #999;
+      background: #333;
       color: white;
       position: absolute;
+      font-weight: bold;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+      animation: shake 0.4s infinite;
     }
+
   </style>
 </head>
 
@@ -97,15 +111,15 @@
     yesBtn.style.transform = "scale(" + yesSize + ")";
 
     if (attempts === 3) {
-      noBtn.innerText = "PARA OWW";
+      noBtn.innerText = "PARA OWW 😭";
     }
 
     if (attempts === 5) {
-      noBtn.innerText = "AH É????";
+      noBtn.innerText = "AH É???? 😏";
     }
 
     if (attempts === 7) {
-      noBtn.innerText = "não, beleza... ACEITA LOGOOOO!!!";
+      noBtn.innerText = "não, beleza... ACEITA LOGOOOO!!! 😭";
     }
 
     if (attempts >= 9) {

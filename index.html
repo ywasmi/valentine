@@ -2,8 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title><h1>TESTE 123 😈</h1>
-</title>
+  <title>Valentine 😈</title>
 
   <style>
     body {
@@ -43,12 +42,20 @@
       border-radius: 25px;
       font-size: 16px;
       cursor: pointer;
-      transition: 0.2s;
+      transition: 0.3s;
+    }
+
+    /* ✨ BOTÃO SIM BRILHANTE */
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #ff4d6d; }
+      50% { box-shadow: 0 0 25px #ff4d6d; }
+      100% { box-shadow: 0 0 5px #ff4d6d; }
     }
 
     .yes {
       background: #ff4d6d;
       color: white;
+      animation: glow 1.5s infinite;
     }
 
     /* 🖤 NÃO dramático */
@@ -82,7 +89,7 @@
 <script>
   function accept() {
     document.getElementById("response").innerHTML =
-      "Ã-MO! SABIA Q IA ACEITAR VEI NEM AMO NAO NÉ 💘";
+      "HA! NEM AMO NÃO NÉÉÉ";
   }
 
   const noBtn = document.querySelector(".no");
@@ -91,7 +98,8 @@
   let attempts = 0;
   let yesSize = 1;
 
-  noBtn.addEventListener("mouseover", function() {
+  /* 🔥 SOLUÇÃO 1: usar mouseenter */
+  noBtn.addEventListener("mouseenter", function() {
     attempts++;
 
     const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
@@ -100,22 +108,24 @@
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
 
+    /* SIM cresce */
     yesSize += 0.1;
     yesBtn.style.transform = "scale(" + yesSize + ")";
 
     if (attempts === 3) {
-      noBtn.innerText = "PARA OWW 🖤";
+      noBtn.innerText = "PARA OWW 😕";
     }
 
-    if (attempts === 5) {
-      noBtn.innerText = "AH É???? 😏";
+    if (attempts === 6) {
+      noBtn.innerText = "AH É???? 🙄🙄🙄🙄";
     }
 
-    if (attempts === 7) {
+    if (attempts === 10) {
       noBtn.innerText = "não, beleza... ACEITA LOGOOOO!!! 😭";
     }
 
-    if (attempts >= 9) {
+    /* 🔥 SOLUÇÃO 2: mais tentativas antes de sumir */
+    if (attempts >= 15) {
       noBtn.style.display = "none";
     }
   });

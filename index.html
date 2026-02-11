@@ -1,7 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💘</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 15px;
+      margin: 15px 0;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #999;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>OIIII QUER EU???? 💘</h1>
+
+    <img src="https://media1.tenor.com/m/eg-oRhfUTK4AAAAd/reaction-meme-stan-twt.gif" alt="Valentine GIF">
+
+    <div>
+      <button class="yes" onclick="accept()">SIIIIMMM 💖</button>
+      <button class="no">NÃO 🙄</button>
+    </div>
+
+    <p id="response"></p>
+  </div>
+
 <script>
   function accept() {
     document.getElementById("response").innerHTML =
-      "Ã-MO! SABIA Q IA ACEITAR VEI NEM AMO NAO NÉ 😭💘";
+      "Ã-MO! SABIA Q IA ACEITAR VEI NEM AMO NAO NÉ 💘";
   }
 
   const noBtn = document.querySelector(".no");
@@ -19,12 +93,11 @@
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
 
-    // botão SIM cresce
     yesSize += 0.1;
     yesBtn.style.transform = "scale(" + yesSize + ")";
 
     if (attempts === 3) {
-      noBtn.innerText = "PARA OWWWW 😭";
+      noBtn.innerText = "PARA OWW";
     }
 
     if (attempts === 5) {
@@ -32,14 +105,13 @@
     }
 
     if (attempts === 7) {
-      noBtn.innerText = "não, beleza... ACEITA LOGOOOO";
+      noBtn.innerText = "não, beleza... ACEITA LOGOOOO!!!";
     }
 
     if (attempts >= 9) {
       noBtn.style.display = "none";
     }
   });
-</script>
 </script>
 
 </body>
